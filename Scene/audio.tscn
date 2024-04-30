@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bemvxkl6dhxb3"]
+
+[ext_resource type="AudioStream" uid="uid://bdurojkohuc41" path="res://Audio/Collect.wav" id="1_8ibdr"]
+[ext_resource type="AudioStream" uid="uid://bxovwun520wj5" path="res://Audio/Jump 1.wav" id="2_wqjbn"]
+[ext_resource type="AudioStream" uid="uid://xxrqjxh47ivu" path="res://Audio/Trophy.wav" id="3_kfiiu"]
+
+[node name="Audio" type="Node"]
+
+[node name="Collect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_8ibdr")
+volume_db = -20.0
+bus = &"SFX"
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_wqjbn")
+volume_db = -20.0
+pitch_scale = 0.72
+bus = &"SFX"
+
+[node name="Trophy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kfiiu")
+volume_db = -20.0
+pitch_scale = 0.99

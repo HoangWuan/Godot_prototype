@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtl5q48o22jr"]
+
+[ext_resource type="Script" path="res://Code/pause.gd" id="1_eimet"]
+[ext_resource type="Texture2D" uid="uid://gvuukng53bjl" path="res://Asset/Free/Menu/Buttons/Play.png" id="1_we3jl"]
+[ext_resource type="Texture2D" uid="uid://b01hnht8ah4uu" path="res://Asset/Free/Menu/Buttons/Back.png" id="2_jw503"]
+[ext_resource type="Texture2D" uid="uid://bcai1yxlqg2gl" path="res://Asset/Free/Menu/Buttons/Close.png" id="3_n5asv"]
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_eimet")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 192.0
+offset_right = -192.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Resume" type="Button" parent="Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -77.79
+offset_top = 43.0
+offset_right = 77.21
+offset_bottom = 198.0
+grow_horizontal = 2
+icon = ExtResource("1_we3jl")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Back" type="Button" parent="Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -80.37
+offset_right = 72.0
+offset_bottom = 74.6304
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.06, 1.06)
+icon = ExtResource("2_jw503")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Exit" type="Button" parent="Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = 120.26
+offset_right = 72.0
+offset_bottom = 275.26
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.06, 1.06)
+icon = ExtResource("3_n5asv")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[connection signal="pressed" from="Panel/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Panel/Exit" to="." method="_on_exit_pressed"]
